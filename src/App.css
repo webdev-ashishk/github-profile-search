@@ -1,0 +1,17 @@
+.circle-image {
+  border-radius: 50%;
+  height: 200px;
+  border: 5px solid lightblue;
+}
+.output {
+  border: 2px solid black;
+  margin-top: 100px;
+}
+.inputbox {
+  /* height: 40px; */
+  border: 2px solid red;
+  font-size: 2rem;
+}
+.profile-image {
+  border: 2px solid blue;
+}
