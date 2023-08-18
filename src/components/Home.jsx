@@ -18,6 +18,7 @@ const Home = () => {
   return (
     <>
       <div className="container">
+        <h1>Search Github Profile by username</h1>
         <div className="input">
           <input
             type="text"
