@@ -7,7 +7,7 @@
   border: 2px solid black;
   margin-top: 100px;
 }
-.inputbox {
+.inputbox .reset {
   /* height: 40px; */
   border: 2px solid red;
   font-size: 1.5rem;

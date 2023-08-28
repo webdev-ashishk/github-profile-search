@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Table from "react-bootstrap/Table";
 const Home = () => {
   const [user, setUser] = useState("none");
   const [query, setQuery] = useState("webdev-ashishk");
-
+  const useRefElement = useRef();
   useEffect(() => {
     async function getUser() {
       const res = await fetch(`https://api.github.com/users/${query}`);
@@ -14,6 +14,10 @@ const Home = () => {
   }, [query]);
   function handleChange(e) {
     setQuery(e.target.value);
+  }
+  function handleReset() {
+    setQuery("");
+    useRefElement.current.focus();
   }
   return (
     <>
@@ -26,7 +30,11 @@ const Home = () => {
             className="inputbox"
             onChange={handleChange}
             value={query}
+            ref={useRefElement}
           />
+          <button className="reset" onClick={handleReset}>
+            Reset
+          </button>
         </div>
         <div className="output">
           <div className="profile-image">
